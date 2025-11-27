@@ -1,4 +1,4 @@
 package com.udea.FleetGuard360F3.questions;
 
-public class Validation {
+public class PanelDePasajero {
 }
