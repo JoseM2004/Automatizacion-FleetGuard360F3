@@ -9,4 +9,6 @@ Feature: Passenger registration in FleetGuard360 Feature 3
   Scenario: Successful user registration with valid data
     Given I am in the registration page
     When I am submit a valid form
+      | firstName | lastName | username  | typeId | id     | phone         | email            | password | confirmPassword | acceptTerms |
+      | Juan      | Santa    | juansanta | CE     | 110111 | +573001234567 | juan@domain.com  | juan123P | juan123P        | true        |
     Then I can see the login page
