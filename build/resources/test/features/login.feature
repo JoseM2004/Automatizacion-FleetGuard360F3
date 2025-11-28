@@ -16,3 +16,10 @@ Feature: Login de pasajero
       | username | password |
       | Jose   | Jose312767467    |
     Then veo "Credenciales inválidas" sin indicar que campo falló
+
+  Scenario: Persistencia de sesión con opción Recordarme
+    Given que marco Recordarme
+      | username | password |
+      | JoseM   | Jose3127674676    |
+    When cierro y vuelvo a abrir la app
+    Then sigo autenticado hasta la expiración configurada

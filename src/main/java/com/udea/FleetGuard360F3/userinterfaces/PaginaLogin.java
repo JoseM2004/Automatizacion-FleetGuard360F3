@@ -16,4 +16,7 @@ public class PaginaLogin {
 
     public static final Target MENSAJE_ERROR = Target.the("mensaje de credenciales inválidas")
             .located(By.xpath("//div[@id='root']/div[1]/ol/li/div/div[2]"));
+
+    public static final Target CHECKBOX_RECORDARME = Target.the("checkbox recordarme")
+            .located(By.xpath("//*[@id='rememberMe']"));
 }

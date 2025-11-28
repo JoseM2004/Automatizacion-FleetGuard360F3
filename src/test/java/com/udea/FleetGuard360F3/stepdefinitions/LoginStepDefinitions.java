@@ -2,10 +2,15 @@ package com.udea.FleetGuard360F3.stepdefinitions;
 
 import com.udea.FleetGuard360F3.questions.MensajeDeError;
 import com.udea.FleetGuard360F3.questions.PanelDePasajero;
+import com.udea.FleetGuard360F3.tasks.AbrirPaginaDeBusqueda;
 import com.udea.FleetGuard360F3.tasks.IniciarSesion;
+import com.udea.FleetGuard360F3.tasks.IniciarSesionConRecuerdame;
+import com.udea.FleetGuard360F3.tasks.ReiniciarElNavegador;
 import com.udea.FleetGuard360F3.userinterfaces.PaginaDeLogin;
+import com.udea.FleetGuard360F3.utils.WaitTime;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.Before;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.annotations.Managed;
@@ -49,6 +54,7 @@ public class LoginStepDefinitions {
         );
     }
 
+    @Then("sigo autenticado hasta la expiración configurada")
     @Then("veo el panel de pasajero")
     public void elPanelDePasajeroDeberiaSerVisible() {
         pasajero.should(
@@ -63,4 +69,23 @@ public class LoginStepDefinitions {
                 seeThat(MensajeDeError.es(), containsString(mensajeEsperado))
         );
     }
+
+    @Given("que marco Recordarme")
+    public void queMarcoRecuerdameConElUsuarioYLaClave(DataTable dataTable) {
+        Map<String, String> data = dataTable.asMaps().get(0);
+        pasajero.attemptsTo(
+
+                IniciarSesionConRecuerdame.conCredenciales(data.get("username"), data.get("password"))
+        );
+    }
+
+    @When("cierro y vuelvo a abrir la app")
+    public void cierroYVuelvoAAbrirLaApp() {
+        pasajero.attemptsTo(
+                ReiniciarElNavegador.reiniciar(),
+                AbrirPaginaDeBusqueda.en()
+        );
+        WaitTime.putWaitTimeOf(1500);
+    }
+
 }
