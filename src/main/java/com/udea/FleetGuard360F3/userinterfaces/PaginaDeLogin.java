@@ -1,4 +1,8 @@
 package com.udea.FleetGuard360F3.userinterfaces;
 
-public class PaginaDeLogin {
+import net.serenitybdd.annotations.DefaultUrl;
+import net.serenitybdd.core.pages.PageObject;
+
+@DefaultUrl("/login")
+public class PaginaDeLogin extends PageObject {
 }
