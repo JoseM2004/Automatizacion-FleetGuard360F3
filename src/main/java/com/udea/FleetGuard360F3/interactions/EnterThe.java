@@ -46,8 +46,10 @@ public class EnterThe implements Interaction {
         actor.attemptsTo(Enter.theValue(data.getConfirmPassword()).into(INPUT_TEXT_CONFIRM_PASS));
         WaitTime.putWaitTimeOf(700);
 
-        actor.attemptsTo(Click.on(ACCEPT_TERMS));
-        WaitTime.putWaitTimeOf(700);
+        if (data.isAcceptTerms()) {
+            actor.attemptsTo(Click.on(ACCEPT_TERMS));
+            WaitTime.putWaitTimeOf(700);
+        }
 
         actor.attemptsTo(Click.on(REGISTER_BUTTON));
         WaitTime.putWaitTimeOf(700);
