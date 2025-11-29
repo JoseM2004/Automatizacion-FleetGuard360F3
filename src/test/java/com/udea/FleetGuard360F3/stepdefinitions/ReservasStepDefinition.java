@@ -85,9 +85,9 @@ public class ReservasStepDefinition {
         );
     }
 
-    // Paso 3: Then el sistema verifica cupos, bloquea asientos y crea la reserva.
-    @Then("el sistema verifica cupos, bloquea asientos y crea la reserva")
-    public void elSistemaVerificaCuposBloqueaAsientosYCreaLaReserva() {
+    // Paso 3: Then veo que la disponibilidad se confirma, mi asiento queda bloqueado y mi reserva queda creada
+    @Then("veo que la disponibilidad se confirma, mi asiento queda bloqueado y mi reserva queda creada")
+    public void veoDisponibilidadDeCuposBloqueaMiAsientoYMiReservaEsCreada() {
         // Asumes que la creación exitosa se refleja en un mensaje o una nueva pantalla.
         pasajero.should(
                 seeThat("el mensaje de confirmación de reserva es visible",
@@ -107,9 +107,9 @@ public class ReservasStepDefinition {
         // No se requiere acción. Es un estado de la interfaz después de la búsqueda.
     }
 
-    // Then se muestra con estado Agotado y el botón Reservar deshabilitado
-    @Then("se muestra con estado Agotado y el botón Reservar deshabilitado")
-    public void seMuestraConEstadoAgotadoYElBotonReservarDeshabilitado() {
+    // Then veo el viaje marcado como Agotado y noto que el botón Reservar está deshabilitado
+    @Then("veo el viaje marcado como Agotado y noto que el botón Reservar está deshabilitado")
+    public void veoEstadoAgotadoYElBotonReservarDeshabilitado() {
         pasajero.should(
                 seeThat("el viaje sin cupo tiene el estado 'Agotado' y el botón de reserva deshabilitado",
                         EstadoDelViaje.sinCupo(),

@@ -14,11 +14,11 @@ Feature: Creación y gestión de reservas
       |origen|destino|fecha|
       |Medellín|Bogotá|2025-11-29|
     When confirmo la reserva
-    Then el sistema verifica cupos, bloquea asientos y crea la reserva
+    Then veo que la disponibilidad se confirma, mi asiento queda bloqueado y mi reserva queda creada
 
   Scenario: Visualización de viaje sin cupo en resultados
     Given un viaje sin cupo
       |origen|destino|fecha|
       |Cali|Montería|2025-12-05|
     When aparece en resultados
-    Then se muestra con estado Agotado y el botón Reservar deshabilitado
+    Then veo el viaje marcado como Agotado y noto que el botón Reservar está deshabilitado
