@@ -34,5 +34,12 @@ public class Busqueda {
 
     public static final Target LISTA_VIAJES = Target.the("lista de viajes encontrados")
             .located(By.xpath("//*[@id='root']/div[2]/main/div/div[3]/div[1]/h3"));
+
+    public static final Target ETIQUETA_ESTADO_AGOTADO = Target.the("Etiqueta de estado Agotado en la tarjeta")
+            // Buscamos el span que tiene la clase 'font-medium' y el texto 'Agotado'
+            .located(By.xpath("//span[contains(@class, 'font-medium') and text()='Agotado']"));
+
+    public static final Target BOTON_AGOTADO_DESHABILITADO = Target.the("Boton 'Agotado' Deshabilitado")
+            .located(By.xpath("//button[@disabled and text()='Agotado']"));
 }
 

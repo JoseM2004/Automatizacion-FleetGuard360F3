@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">1</div>
+<div class="counter">3</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">10.658s</div>
+<div class="counter">17.604s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,7 +79,17 @@
 </thead>
 <tr>
 <td class="success">Búsqueda de viajes con filtros válidos</td>
-<td class="success">10.658s</td>
+<td class="success">10.142s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Reserva de un viaje con cupo disponible</td>
+<td class="success">4.041s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Visualización de viaje sin cupo en resultados</td>
+<td class="success">3.421s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -97,9 +107,9 @@ Búsqueda de viajes con filtros válidos(creación-y-gestión-de-reservas;búsqu
 --------------------------------------------------------------------------------
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors, \r\n                   --di..., --disable-default-apps, --disable-extensions-file-a..., \r\n                   --in..., --disable-infobars,--disabl..., --remote-allow-origins=*], extensions: []}}
-nov 28, 2025 3:43:43 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+nov 28, 2025 11:17:48 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 142
-nov 28, 2025 3:43:43 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+nov 28, 2025 11:17:48 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 142.0.7444.176. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.16.1` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 [Test worker] INFO  - ?[92m
   _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
@@ -108,6 +118,38 @@ WARNING: Unable to find version of CDP to use for 142.0.7444.176. You may need t
    |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
 
 Búsqueda de viajes con filtros válidos
+----------------------------------------------------------------------?[0m
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Reserva de un viaje con cupo disponible(creación-y-gestión-de-reservas;reserva-de-un-viaje-con-cupo-disponible)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - ?[92m
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Reserva de un viaje con cupo disponible
+----------------------------------------------------------------------?[0m
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Visualización de viaje sin cupo en resultados(creación-y-gestión-de-reservas;visualización-de-viaje-sin-cupo-en-resultados)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - ?[92m
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Visualización de viaje sin cupo en resultados
 ----------------------------------------------------------------------?[0m
 </pre>
 <button class="clipboard-copy-btn" aria-label="Copy to clipboard" data-copy-element-id="class-stderr">Copy</button>
@@ -121,7 +163,7 @@ Búsqueda de viajes con filtros válidos
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 9.1.0</a> at 28/11/2025, 3:43:49 p. m.</p>
+<a href="https://www.gradle.org">Gradle 9.1.0</a> at 28/11/2025, 11:18:02 p. m.</p>
 </div>
 </div>
 </body>
