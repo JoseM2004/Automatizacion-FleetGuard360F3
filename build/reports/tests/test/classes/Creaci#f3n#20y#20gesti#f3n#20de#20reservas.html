@@ -3,17 +3,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta http-equiv="x-ua-compatible" content="IE=edge"/>
-<title>Test results - Class Login de pasajero</title>
+<title>Test results - Class Creación y gestión de reservas</title>
 <link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
 <link href="../css/style.css" rel="stylesheet" type="text/css"/>
 <script src="../js/report.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="content">
-<h1>Class Login de pasajero</h1>
+<h1>Class Creación y gestión de reservas</h1>
 <div class="breadcrumbs">
 <a href="../index.html">all</a> &gt; 
-<a href="../packages/default-package.html">default-package</a> &gt; Login de pasajero</div>
+<a href="../packages/default-package.html">default-package</a> &gt; Creación y gestión de reservas</div>
 <div id="summary">
 <table>
 <tr>
@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">3</div>
+<div class="counter">1</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">14.058s</div>
+<div class="counter">10.658s</div>
 <p>duration</p>
 </div>
 </td>
@@ -78,18 +78,8 @@
 </tr>
 </thead>
 <tr>
-<td class="success">Inicio de sesión con credenciales correctas</td>
-<td class="success">5.717s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">Intento de inicio de sesión con credenciales incorrectas</td>
-<td class="success">1.489s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">Persistencia de sesión con opción Recordarme</td>
-<td class="success">6.852s</td>
+<td class="success">Búsqueda de viajes con filtros válidos</td>
+<td class="success">10.658s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -103,13 +93,13 @@
    | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
    |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
 
-Inicio de sesión con credenciales correctas(login-de-pasajero;inicio-de-sesión-con-credenciales-correctas)
+Búsqueda de viajes con filtros válidos(creación-y-gestión-de-reservas;búsqueda-de-viajes-con-filtros-válidos)
 --------------------------------------------------------------------------------
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors, \r\n                   --di..., --disable-default-apps, --disable-extensions-file-a..., \r\n                   --in..., --disable-infobars,--disabl..., --remote-allow-origins=*], extensions: []}}
-nov 28, 2025 12:58:10 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+nov 28, 2025 3:43:43 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 142
-nov 28, 2025 12:58:10 A. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+nov 28, 2025 3:43:43 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 142.0.7444.176. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.16.1` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 [Test worker] INFO  - ?[92m
   _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
@@ -117,39 +107,7 @@ WARNING: Unable to find version of CDP to use for 142.0.7444.176. You may need t
    | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
    |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
 
-Inicio de sesión con credenciales correctas
-----------------------------------------------------------------------?[0m
-[Test worker] INFO  - 
-  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
- |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
-   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
-   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
-
-Intento de inicio de sesión con credenciales incorrectas(login-de-pasajero;intento-de-inicio-de-sesión-con-credenciales-incorrectas)
---------------------------------------------------------------------------------
-[Test worker] INFO  - ?[92m
-  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
- |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
-   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
-   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
-
-Intento de inicio de sesión con credenciales incorrectas
-----------------------------------------------------------------------?[0m
-[Test worker] INFO  - 
-  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
- |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
-   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
-   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
-
-Persistencia de sesión con opción Recordarme(login-de-pasajero;persistencia-de-sesión-con-opción-recordarme)
---------------------------------------------------------------------------------
-[Test worker] INFO  - ?[92m
-  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
- |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
-   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
-   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
-
-Persistencia de sesión con opción Recordarme
+Búsqueda de viajes con filtros válidos
 ----------------------------------------------------------------------?[0m
 </pre>
 <button class="clipboard-copy-btn" aria-label="Copy to clipboard" data-copy-element-id="class-stderr">Copy</button>
@@ -163,7 +121,7 @@ Persistencia de sesión con opción Recordarme
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 9.1.0</a> at 28/11/2025, 12:58:21 a. m.</p>
+<a href="https://www.gradle.org">Gradle 9.1.0</a> at 28/11/2025, 3:43:49 p. m.</p>
 </div>
 </div>
 </body>
