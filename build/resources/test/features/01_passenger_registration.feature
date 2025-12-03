@@ -17,7 +17,7 @@ Feature: Passenger registration in FleetGuard360 Feature 3
     Given I am in the registration page
     When I am submitting a valid form with an existing email address
       | firstName | lastName | username  | typeId | id     | phone         | email               | password | confirmPassword | acceptTerms |
-      | Jose      | Perez    | juanperez | CE     | 110112 | +573001234568 | usuario@dominio.com | jose123P | jose123P        | true        |
+      | Juan      | Perez    | juanperez | CE     | 110112 | +573001234568 | juan@domain.com | jose123P | jose123P        | true        |
     Then I see "El email ya está registrado." floating message
     And I cannot create my account
 

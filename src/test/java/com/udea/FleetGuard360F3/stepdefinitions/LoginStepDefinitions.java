@@ -35,6 +35,8 @@ public class LoginStepDefinitions {
 
     PaginaDeLogin paginaDeLogin;
 
+
+
     private Actor pasajero = Actor.named("Pasajero");
 
     @Before
@@ -60,6 +62,7 @@ public class LoginStepDefinitions {
         pasajero.should(
                 seeThat(PanelDePasajero.esVisible(), is(true))
         );
+        WaitTime.putWaitTimeOf(500);
     }
 
 
@@ -68,6 +71,7 @@ public class LoginStepDefinitions {
         pasajero.should(
                 seeThat(MensajeDeError.es(), containsString(mensajeEsperado))
         );
+        WaitTime.putWaitTimeOf(500);
     }
 
     @Given("que marco Recordarme")

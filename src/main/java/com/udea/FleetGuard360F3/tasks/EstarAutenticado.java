@@ -13,8 +13,8 @@ public class EstarAutenticado implements Task {
     // 1. Usa tu PageObject de Login (que sí se puede instanciar)
     private PaginaDeLogin paginaDeInicio;
 
-    private static final String USUARIO_AUTH = "JoseM";
-    private static final String CLAVE_AUTH = "Jose3127674676";
+    private final String USUARIO_AUTH = "JoseM";
+    private final String CLAVE_AUTH = "Jose3127674676";
 
     public EstarAutenticado() {
         // 2. Instancia tu PageObject concreto, no el abstracto de Serenity.

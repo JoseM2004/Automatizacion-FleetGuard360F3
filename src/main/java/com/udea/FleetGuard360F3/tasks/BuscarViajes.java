@@ -1,6 +1,7 @@
 package com.udea.FleetGuard360F3.tasks;
 
 import com.udea.FleetGuard360F3.userinterfaces.Busqueda;
+import com.udea.FleetGuard360F3.utils.WaitTime;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
@@ -37,24 +38,40 @@ public class BuscarViajes implements Task {
         LocalDate fechaViaje = LocalDate.parse(this.fecha, DateTimeFormatter.ISO_DATE);
         String dia = String.valueOf(fechaViaje.getDayOfMonth());
 
-        actor.attemptsTo(
-                // ORIGEN
-                Click.on(Busqueda.CAMPO_ORIGEN),
-                Scroll.to(Busqueda.OPCION_CIUDAD(origen)),
-                Click.on(Busqueda.OPCION_CIUDAD(origen)),
+        // ORIGEN
+        actor.attemptsTo(Click.on(Busqueda.CAMPO_ORIGEN));
+        WaitTime.putWaitTimeOf(700);
 
-                // DESTINO
-                Click.on(Busqueda.CAMPO_DESTINO),
-                Click.on(Busqueda.OPCION_CIUDAD(destino)),
+        actor.attemptsTo(Scroll.to(Busqueda.OPCION_CIUDAD(origen)));
+        WaitTime.putWaitTimeOf(700);
 
-                // CALENDARIO
-                Click.on(Busqueda.BOTON_ABRIR_CALENDARIO),
-                Scroll.to(Busqueda.DIA_DEL_CALENDARIO(dia)),
-                Click.on(Busqueda.DIA_DEL_CALENDARIO(dia)),
+        actor.attemptsTo(Click.on(Busqueda.OPCION_CIUDAD(origen)));
+        WaitTime.putWaitTimeOf(700);
 
-                // BUSCAR
-                Click.on(Busqueda.BOTON_BUSCAR),
-                WaitUntil.angularRequestsHaveFinished()
-        );
+        // DESTINO
+        actor.attemptsTo(Click.on(Busqueda.CAMPO_DESTINO));
+        WaitTime.putWaitTimeOf(700);
+
+        actor.attemptsTo(Click.on(Busqueda.OPCION_CIUDAD(destino)));
+        WaitTime.putWaitTimeOf(700);
+
+        // CALENDARIO
+        actor.attemptsTo(Click.on(Busqueda.BOTON_ABRIR_CALENDARIO));
+        WaitTime.putWaitTimeOf(700);
+
+        actor.attemptsTo(Scroll.to(Busqueda.DIA_DEL_CALENDARIO(dia)));
+        WaitTime.putWaitTimeOf(700);
+
+        actor.attemptsTo(Click.on(Busqueda.DIA_DEL_CALENDARIO(dia)));
+        WaitTime.putWaitTimeOf(700);
+
+
+        // BUSCAR
+        actor.attemptsTo(Click.on(Busqueda.BOTON_BUSCAR));
+        WaitTime.putWaitTimeOf(700);
+
+        actor.attemptsTo(WaitUntil.angularRequestsHaveFinished());
+        WaitTime.putWaitTimeOf(700);
+
     }
 }

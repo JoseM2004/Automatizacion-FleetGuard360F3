@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Creación y gestión de reservas" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-11-29T04:17:43.499Z" hostname="DESKTOP-EC14KE3" time="17.604">
+<testsuite name="Creación y gestión de reservas" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-12-03T01:27:56.606Z" hostname="DESKTOP-EC14KE3" time="50.889">
   <properties/>
-  <testcase name="Búsqueda de viajes con filtros válidos" classname="Creación y gestión de reservas" time="10.142"/>
-  <testcase name="Reserva de un viaje con cupo disponible" classname="Creación y gestión de reservas" time="4.041"/>
-  <testcase name="Visualización de viaje sin cupo en resultados" classname="Creación y gestión de reservas" time="3.421"/>
+  <testcase name="Búsqueda de viajes con filtros válidos" classname="Creación y gestión de reservas" time="22.904"/>
+  <testcase name="Reserva de un viaje con cupo disponible" classname="Creación y gestión de reservas" time="15.124"/>
+  <testcase name="Visualización de viaje sin cupo en resultados" classname="Creación y gestión de reservas" time="12.859"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[[Test worker] INFO  - 
   _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
@@ -15,9 +15,9 @@ Búsqueda de viajes con filtros válidos(creación-y-gestión-de-reservas;búsqu
 --------------------------------------------------------------------------------
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors, \r\n                   --di..., --disable-default-apps, --disable-extensions-file-a..., \r\n                   --in..., --disable-infobars,--disabl..., --remote-allow-origins=*], extensions: []}}
-nov 28, 2025 11:17:48 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+dic 02, 2025 8:28:02 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 142
-nov 28, 2025 11:17:48 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+dic 02, 2025 8:28:02 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 142.0.7444.176. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.16.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 [Test worker] INFO  - ?[92m
   _____   ___   ___   _____     ___     _     ___   ___   ___   ___  

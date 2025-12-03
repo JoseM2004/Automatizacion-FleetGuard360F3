@@ -25,19 +25,14 @@ public class IniciarSesionConRecuerdame implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(
-                // 1. Ingresa credenciales
-                Enter.theValue(user).into(PaginaLogin.CAMPO_USER),
-                Enter.theValue(contrasena).into(PaginaLogin.CAMPO_CONTRASENA),
 
-                // 2. Marca la casilla "Recuérdame"
-                Click.on(PaginaLogin.CHECKBOX_RECORDARME),
-
-                // 3. Presiona el botón
-
-                Click.on(PaginaLogin.BOTON_INICIAR_SESION)
-        );
-
+        actor.attemptsTo(Enter.theValue(user).into(PaginaLogin.CAMPO_USER));
+        WaitTime.putWaitTimeOf(700);
+        actor.attemptsTo(Enter.theValue(contrasena).into(PaginaLogin.CAMPO_CONTRASENA));
+        WaitTime.putWaitTimeOf(700);
+        actor.attemptsTo(Click.on(PaginaLogin.CHECKBOX_RECORDARME));
+        WaitTime.putWaitTimeOf(700);
+        actor.attemptsTo(Click.on(PaginaLogin.BOTON_INICIAR_SESION));
         WaitTime.putWaitTimeOf(2000);
     }
 }
