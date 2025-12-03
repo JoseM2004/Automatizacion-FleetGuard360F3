@@ -32,7 +32,7 @@ public class ReservasStepDefinition {
     @Managed(driver = "chrome")
     public WebDriver navegador;
 
-    @Before
+
     public void setTheStage() {
         // ¡PASO CRÍTICO!: Asigna la habilidad de usar el navegador al Actor.
         pasajero.can(BrowseTheWeb.with(navegador));
@@ -43,6 +43,7 @@ public class ReservasStepDefinition {
 
     @Given("que estoy autenticado como pasajero")
     public void queEstoyAutenticadoComoPasajero() {
+        setTheStage();
         // Reutiliza la lógica de login
         /*pasajero.attemptsTo(
                 EstarAutenticado.conCredencialesValidas()
@@ -70,6 +71,7 @@ public class ReservasStepDefinition {
     @Given("que selecciono un viaje con cupo")
     public void queSeleccionoUnViajeConCupo(DataTable table) {
 
+        setTheStage();
         buscoViajesDeAparaLaFecha(table);
         // Nota: Asume que el actor ya buscó viajes antes (del escenario anterior)
         pasajero.attemptsTo(
@@ -85,9 +87,9 @@ public class ReservasStepDefinition {
         );
     }
 
-    // Paso 3: Then veo que la disponibilidad se confirma, mi asiento queda bloqueado y mi reserva queda creada
+    // Paso 3: Then el sistema verifica cupos, bloquea asientos y crea la reserva.
     @Then("veo que la disponibilidad se confirma, mi asiento queda bloqueado y mi reserva queda creada")
-    public void veoDisponibilidadDeCuposBloqueaMiAsientoYMiReservaEsCreada() {
+    public void elSistemaVerificaCuposBloqueaAsientosYCreaLaReserva() {
         // Asumes que la creación exitosa se refleja en un mensaje o una nueva pantalla.
         pasajero.should(
                 seeThat("el mensaje de confirmación de reserva es visible",
@@ -98,6 +100,7 @@ public class ReservasStepDefinition {
 
     @Given("un viaje sin cupo")
     public void unViajeSinCupo(DataTable table) {
+        setTheStage();
         buscoViajesDeAparaLaFecha(table);
 
     }
@@ -107,9 +110,9 @@ public class ReservasStepDefinition {
         // No se requiere acción. Es un estado de la interfaz después de la búsqueda.
     }
 
-    // Then veo el viaje marcado como Agotado y noto que el botón Reservar está deshabilitado
+    // Then se muestra con estado Agotado y el botón Reservar deshabilitado
     @Then("veo el viaje marcado como Agotado y noto que el botón Reservar está deshabilitado")
-    public void veoEstadoAgotadoYElBotonReservarDeshabilitado() {
+    public void seMuestraConEstadoAgotadoYElBotonReservarDeshabilitado() {
         pasajero.should(
                 seeThat("el viaje sin cupo tiene el estado 'Agotado' y el botón de reserva deshabilitado",
                         EstadoDelViaje.sinCupo(),

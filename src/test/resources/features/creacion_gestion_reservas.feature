@@ -5,14 +5,14 @@ Feature: Creación y gestión de reservas
     Given que estoy autenticado como pasajero
     When busco viajes
       |origen|destino|fecha|
-      |Medellín|Bogotá|2025-12-02|
+      |Medellín|Popayán|2025-12-05|
     Then veo una lista de viajes que coinciden con su disponibilidad de asientos
 
 
   Scenario: Reserva de un viaje con cupo disponible
     Given que selecciono un viaje con cupo
       |origen|destino|fecha|
-      |Medellín|Bogotá|2025-11-29|
+      |Medellín|Popayán|2025-12-05|
     When confirmo la reserva
     Then veo que la disponibilidad se confirma, mi asiento queda bloqueado y mi reserva queda creada
 
